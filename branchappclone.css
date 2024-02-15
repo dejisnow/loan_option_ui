@@ -10,19 +10,38 @@ width:100%;
 }
 .circle_Div{
 margin-top:20px;
-    width:1000px;
+    width:fit-content;
     display:flex;
-    overflow-x:scroll ;
-    height:60vh;
+    overflow-x:scroll;
+    height:100%;
     align-items:center ;
+    position:absolute ;
+    
 }
+.circle_Div::-webkit-scrollbar{
+
+height:10px;
+    background-color:red;
+}
+circle_Div::-webkit-scrollbar-thumb{
+
+   background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+circle_Div::-webkit-scrollbar-track{
+
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   }
+
 .circle{
-    width:450px;
-    height:120px;
+    width:250px;
+    height:250px;
+    position:relative ;
     background-color:#2edfae;
-    border-radius:45%;
+    border-radius:48%;
     margin:0 10px;
     text-align:center ;
+    font-size:25px;
     color:white;
     display:flex;
     justify-content:center;
