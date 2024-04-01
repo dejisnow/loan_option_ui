@@ -5,23 +5,41 @@
 }
 
 body {
+height:100vh;
 width:100%;
+position:relative ;
+
+
     
 }
+.main{
+width:100%;
+height:40vh;
+overflow-x:scroll;
+    position:relative ;
+    
+    
+}
+.btn{
+left:50%;
+    position:absolute ;
+    top:50%;
+}
 .circle_Div{
+
 margin-top:20px;
     width:fit-content;
     display:flex;
     overflow-x:scroll;
     height:100%;
     align-items:center ;
-    position:absolute ;
+    
     
 }
 .circle_Div::-webkit-scrollbar{
 
 height:10px;
-    background-color:red;
+    background-color:#eeff2e;
 }
 circle_Div::-webkit-scrollbar-thumb{
 
@@ -33,20 +51,40 @@ circle_Div::-webkit-scrollbar-track{
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
    }
 
-.circle{
-    width:250px;
-    height:250px;
+.option{
+    width:120px;
+    height:120px;
     position:relative ;
     background-color:#2edfae;
     border-radius:48%;
     margin:0 10px;
     text-align:center ;
-    font-size:25px;
+    font-size:15px;
     color:white;
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:5px;
 }
-.circle p{
+.option.active{
+    animation:activate 1s ease ;
+    background-color:red;
+    scale:1.2;
+    
+}
+.option p{
     text-align:center;
 }
+
+
+@keyframes activate {
+    0%{
+        scale:1;
+    }
+    
+    100%{
+        scale:1.2;
+    }
+}
+
+
